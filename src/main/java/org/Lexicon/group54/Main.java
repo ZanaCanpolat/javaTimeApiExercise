@@ -57,6 +57,14 @@ public class Main {
         currentDay = LocalDate.of(1977,04,23);
         System.out.println("My birthday = " + currentDay +" was a " +currentDay.getDayOfWeek());
 
+        System.out.println();
+
+        //Exercise 6
+        //Setting date to a specific date and extracting the mont
+        currentDay = currentDay.plusYears(10);
+        currentDay = currentDay.minusMonths(10);
+        System.out.println("Current Day + 10 yease - 10 months is = " + currentDay.getMonth());
+
 
     }
    }
