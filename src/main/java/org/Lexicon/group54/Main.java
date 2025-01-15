@@ -89,5 +89,9 @@ public class Main {
         LocalTime currentTime = LocalTime.now();
         System.out.println("CurrentTime = " + currentTime);
 
+        //Exercise 9
+        //Extracting nanoseconds from time variable
+        System.out.println("Nano seconds:  " +currentTime.getNano());
+
     }
    }
