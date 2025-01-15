@@ -133,7 +133,10 @@ public class Main {
         System.out.println();
 
         //Exercise 15
-
+        //Create a LocalDateTime object by combining LocalDate object and LocalTime object.
+        LocalDateTime ex15DateTime;
+        ex15DateTime= LocalDateTime.of(LocalDate.now(), LocalTime.now());
+        System.out.println("Combining LocalDate and LocalTime: " +ex15DateTime );
 
     }
    }
