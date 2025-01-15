@@ -1,6 +1,7 @@
 package org.Lexicon.group54;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
@@ -115,7 +116,11 @@ public class Main {
         System.out.println();
 
         //Exercise 13
-        //
+        //Create a LocalDateTime with the date and time components as: date: 2018-04-05, time: 10.00
+        LocalDateTime currentDateTime;
+        currentDateTime = LocalDateTime.of(2018, 04, 05, 10, 00);
+        System.out.println("Specific date and time: " + currentDateTime);
+
 
 
     }
