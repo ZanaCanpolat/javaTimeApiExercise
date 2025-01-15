@@ -30,5 +30,29 @@ public class Main {
         formattedDate = currentDay.format(formatter);
         System.out.println(LocalDate.now() + " " + formattedDate);
 
+        System.out.println();
+
+        //Exercise 3
+        // Create a LocalDate of last Monday. Then print out the entire week in a loop using standard ISO format.
+        System.out.println("Exercise 3: ");
+        currentDay = LocalDate.of(2025, 01,13);
+        for (int i = 1; i <= 7; i++)
+        {
+            currentDay =currentDay.plusDays(1);
+            System.out.println("currentDay = " + currentDay);
+        }
+
+        System.out.println();
+
+        // Exercise 4
+        // Create a LocalDate object from a String by using the .parse() method.
+        System.out.println("Exercise 4: ");
+        currentDay = LocalDate.parse("2025-01-01");
+        System.out.println("currentDay = " + currentDay);
+
+
+        //Exercise 5
+
+
     }
    }
