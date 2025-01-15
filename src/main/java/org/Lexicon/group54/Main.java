@@ -121,6 +121,18 @@ public class Main {
         currentDateTime = LocalDateTime.of(2018, 04, 05, 10, 00);
         System.out.println("Specific date and time: " + currentDateTime);
 
+        System.out.println();
+
+        //Exercise 14
+        //Using DateTimeFormatter format the LocalDateTime object from exercise 13 to a String that should
+        // look like this: torsdag 5 april 10:00
+        DateTimeFormatter ex14Formatter = DateTimeFormatter.ofPattern("E dd MMM HH:mm");
+        String formattedDateTime = currentDateTime.format(ex14Formatter);
+        System.out.println("Formatted Date Time: " + formattedDateTime);
+
+        System.out.println();
+
+        //Exercise 15
 
 
     }
