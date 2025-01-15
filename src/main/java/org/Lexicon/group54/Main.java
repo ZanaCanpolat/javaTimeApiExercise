@@ -1,7 +1,5 @@
 package org.Lexicon.group54;
 
-import javax.swing.text.DateFormatter;
-import java.text.DateFormat;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
@@ -16,6 +14,7 @@ public class Main {
         //Variables
         LocalDate currentDay = LocalDate.now();
         String formattedDate; // Variable that will contain the formatted time
+        LocalTime currentTime = LocalTime.now();
 
 
         // Exercise 1
@@ -86,12 +85,38 @@ public class Main {
 
         //Exercise 8
         //Creating a local time object
-        LocalTime currentTime = LocalTime.now();
         System.out.println("CurrentTime = " + currentTime);
+
+        System.out.println();
 
         //Exercise 9
         //Extracting nanoseconds from time variable
         System.out.println("Nano seconds:  " +currentTime.getNano());
+
+        System.out.println();
+
+        //Exercise 11
+        //Creating a LocalTime object from String using the .parse() method
+        String time = ("00:00:00");
+        currentTime = LocalTime.parse(time);
+        System.out.println("currentTime = " + currentTime);
+
+        System.out.println();
+
+        //Exercise 12
+        //Formating localtime to remove nanoseconds
+        String formattedTime; // Variable that will contain the formatted time
+        currentTime = LocalTime.now();  // Gets current time form java.time
+
+        DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern(" HH:mm:ss ");    // sets the format for how the time should be displayed
+        formattedTime = currentTime.format(timeFormatter);
+        System.out.println("Formatted time: " + formattedTime);
+
+        System.out.println();
+
+        //Exercise 13
+        //
+
 
     }
    }
