@@ -50,8 +50,12 @@ public class Main {
         currentDay = LocalDate.parse("2025-01-01");
         System.out.println("currentDay = " + currentDay);
 
+        System.out.println();
 
         //Exercise 5
+        // Extract the day from a specific date
+        currentDay = LocalDate.of(1977,04,23);
+        System.out.println("My birthday = " + currentDay +" was a " +currentDay.getDayOfWeek());
 
 
     }
