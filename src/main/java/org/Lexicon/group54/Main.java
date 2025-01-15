@@ -138,5 +138,19 @@ public class Main {
         ex15DateTime= LocalDateTime.of(LocalDate.now(), LocalTime.now());
         System.out.println("Combining LocalDate and LocalTime: " +ex15DateTime );
 
+        System.out.println();
+
+        //Exercise 16
+        //Create a LocalDateTime object. Then get the LocalDate and LocalTime components into separate
+        // objects of respective types from the LocalDateTime object.
+        LocalDateTime ex16DateTime = LocalDateTime.now();
+        //ex16DateTime.toLocalDate();
+        //ex16DateTime.toLocalTime();
+        LocalDate ex16Date = LocalDateTime.now().toLocalDate();
+        LocalTime ex16Time = LocalDateTime.now().toLocalTime();
+        System.out.println("Extracted date: " + ex16Date);
+        System.out.println("Extracted time: " + ex16Time);
+
+
     }
    }
