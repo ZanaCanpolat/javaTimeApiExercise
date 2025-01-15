@@ -4,6 +4,7 @@ import javax.swing.text.DateFormatter;
 import java.text.DateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -55,7 +56,8 @@ public class Main {
         //Exercise 5
         // Extract the day from a specific date
         currentDay = LocalDate.of(1977,04,23);
-        System.out.println("My birthday = " + currentDay +" was a " +currentDay.getDayOfWeek());
+        LocalDate myBirthday = currentDay;
+        System.out.println("My birthday = " + myBirthday +" was a " +myBirthday.getDayOfWeek());
 
         System.out.println();
 
@@ -63,8 +65,26 @@ public class Main {
         //Setting date to a specific date and extracting the mont
         currentDay = currentDay.plusYears(10);
         currentDay = currentDay.minusMonths(10);
-        System.out.println("Current Day + 10 yease - 10 months is = " + currentDay.getMonth());
+        LocalDate exSixDate = currentDay;
+        System.out.println("Current Day + 10 yease - 10 months is = " + exSixDate.getMonth());
 
+        System.out.println();
+
+        //Exercise 7
+        // Using the LocalDate from exercise 6 and your birthdate, create a Period between your birthdate and
+        // the date from exercise 5. Print out the elapsed years, months and days
+        long comparisonDate1 = ChronoUnit.DAYS.between(myBirthday, exSixDate);
+        System.out.println("comparisonDate1 = " + comparisonDate1);
+        for (int i = 1; i <= comparisonDate1; i++ )
+        {
+            System.out.println(myBirthday);
+            myBirthday = myBirthday.plusDays(1);
+        }
+
+        System.out.println();
+
+        //Exercise 8
+        //Creating a local time object
 
     }
    }
