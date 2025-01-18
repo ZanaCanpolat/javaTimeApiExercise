@@ -18,15 +18,16 @@ public class Main {
         LocalTime currentTime = LocalTime.now();
 
 
+
         // Exercise 1
         // Creating a local date and printing
         System.out.println("Exercise 1: ");
-        System.out.println("currentDay = " + currentDay);
+        System.out.println("CurrentDay = " + currentDay);
 
         System.out.println();
         
         // Exercise 2
-        // Creating a local date and printing
+        // Formatted date and printing it out
         System.out.println("Exercise 2: ");
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern(" E dd MMM ");    // sets the format for how the time should be displayed
         formattedDate = currentDay.format(formatter);
@@ -37,11 +38,11 @@ public class Main {
         //Exercise 3
         // Create a LocalDate of last Monday. Then print out the entire week in a loop using standard ISO format.
         System.out.println("Exercise 3: ");
-        currentDay = LocalDate.of(2025, 01,13);
+        currentDay = LocalDate.of(2025, 01,13); //This line sets currentDay to a specific day/date
         for (int i = 1; i <= 7; i++)
         {
             currentDay =currentDay.plusDays(1);
-            System.out.println("currentDay = " + currentDay);
+            System.out.println("CurrentDay = " + currentDay);
         }
 
         System.out.println();
@@ -50,24 +51,25 @@ public class Main {
         // Create a LocalDate object from a String by using the .parse() method.
         System.out.println("Exercise 4: ");
         currentDay = LocalDate.parse("2025-01-01");
-        System.out.println("currentDay = " + currentDay);
+        System.out.println("CurrentDay set to = " + currentDay);
 
         System.out.println();
 
         //Exercise 5
         // Extract the day from a specific date
-        currentDay = LocalDate.of(1977,04,23);
-        LocalDate myBirthday = currentDay;
-        System.out.println("My birthday = " + myBirthday +" was a " +myBirthday.getDayOfWeek());
+        System.out.println("Exercise 5");
+        LocalDate myBirthday = LocalDate.of(1977,04,23);
+        System.out.println("My birthday "  + myBirthday + " was a " + currentDay.getDayOfWeek());
 
         System.out.println();
 
         //Exercise 6
-        //Setting date to a specific date and extracting the mont
-        currentDay = currentDay.plusYears(10);
-        currentDay = currentDay.minusMonths(10);
-        LocalDate exSixDate = currentDay;
-        System.out.println("Current Day + 10 yease - 10 months is = " + exSixDate.getMonth());
+        //Setting date to a specific date and extracting the month
+        System.out.println("Exercise 6");
+        LocalDate exSixDate = LocalDate.now();
+        exSixDate = exSixDate.plusYears(10);
+        exSixDate = exSixDate.plusMonths(10);
+        System.out.println("Current Day + 10 years + 10 months is = " + exSixDate.getMonth());
 
         System.out.println();
 
